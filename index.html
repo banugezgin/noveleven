@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonic Astro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .planet-container {
+            
+            border: solid 5px blueviolet;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: right;
+            height: 240vh;
+            padding: 20px;
+            border-radius: 10px;
+            gap: 2rem;
+        
+        }
+
+        .planet {
+            border: solid 5px yellow;
+            display: flex;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 5px;
+            gap: 5px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-bottom: 50px;
+
+        }
+
+        @media (max-width: 450px) {
+            .planet {
+                flex-direction: column;
+                height: 10%;
+        
+            }
+
+            .planet-container {
+                height: 550vh
+            }
+
+        }
+
+        @media (max-width: 550px) {
+            .planet {
+                flex-direction: column;
+                height: 10%;
+        
+            }
+
+            .planet-container {
+                height: 650vh
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="heading">
+        <h1>Harmonic Astrology</h1>
+    </div>
+    
+    <div class="planet-container">
+        <div class="sun planet">
+            <div class="planet-name">
+                Sun
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#x2609; Select Sun Sign</option>
+                    <option value="Aries">Aries ♈</option>
+                    <option value="Taurus">Taurus ♉</option>
+                    <option value="Gemini">Gemini ♊</option>
+                    <option value="Cancer">Cancer ♋</option>
+                    <option value="Leo">Leo ♌</option>
+                    <option value="Virgo">Virgo ♍</option>
+                    <option value="Libra">Libra ♎</option>
+                    <option value="Scorpio">Scorpio ♏</option>
+                    <option value="Sagittarius">Sagittarius ♐</option>
+                    <option value="Capricorn">Capricorn ♑</option>
+                    <option value="Aquarius">Aquarius ♒</option>
+                    <option value="Pisces">Pisces ♓</option>
+                  </select>
+            </div>
+            <div class="planet-degree">
+                12 degree
+            </div>
+            <div class="planet-min">
+                42 min
+            </div>
+        </div>
+
+        <div class="moon planet">
+            <div class="planet-name">
+                Moon
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9789; Select Moon Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+
+        <div class="mercury planet">
+            <div class="planet-name">
+                Mercury
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9791; Select Mercury Sign/option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        
+        <div class="venus planet">
+            <div class="planet-name">
+                Venus
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9792; Select Venus Sign</option>
+                    <option>...</option>
+                  </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        <div class="mars planet">
+            <div class="planet-name">
+                Mars
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9794;  Select Mars Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        
+        <div class="jupiter planet">
+            <div class="planet-name">
+                Jupiter
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9795; Select Jupiter Sign</option>
+                    <option>...</option>
+                  </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        
+        <div class="saturn planet">
+            <div class="planet-name">
+                Saturn
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9796; Select Saturn Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        
+        <div class="uranus planet">
+            <div class="planet-name">
+                Uranus
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9797;  Select Uranus Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div>
+        
+        <div class="neptune planet">
+            <div class="planet-name">
+                Neptune
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9798; Select Neptune Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div> 
+
+        <div class="pluto planet">
+            <div class="planet-name">
+                Pluto
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9799; Select Pluto Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div> 
+        <div class="chiron planet">
+            <div class="planet-name">
+                Chiron
+            </div>
+            <div class="planet-sign">
+                <select id="inputState" class="form-select">
+                    <option selected>&#9911; Select Chiron Sign</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="planet-degree">
+                34 degree
+            </div>
+            <div class="planet-min">
+                13 min
+            </div>
+        </div> 
+        <div class="button">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
